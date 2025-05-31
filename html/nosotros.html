@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laptopedia</title>
+  <link rel="icon" type="image/png" href="/img/lg.png"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/nostros.css">
+</head>
+<body>
+     <header>
+    <div class="principal">
+      <div class="menu-principal">
+        <a href="/index.html" target="_top" class="logo">laptopedia</a>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/index.html" target="_top">Inicio</a></li>
+            <li>
+              <a href="/html/productos.html" target="_top">Productos</a>
+            </li>
+            <li><a href="/html/nosotros.html" target="_top">Nosotros</a></li>
+            <li><a href="/html/contactos.html" target="_top">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="submenu">
+      <div class="container-submenu">
+        <div>
+          <div class="categoria">
+            <div>
+              <input type="checkbox" id="menu-toggle" />
+              <label for="menu-toggle" class="menu-icon"
+                aria-label="Abrir menú de navegación"><span>Categoría</span>&#9776;</label>
+              <nav class="menu">
+                <ul>
+                  <li><a href="#">Todo</a></li>
+                  <li><a href="#">Ofertas</a></li>
+                  <li><a href="#">Nuevo</a></li>
+                  <li><a href="#">Lo mas vendido</a></li>
+                  <li><a href="#">Para trabajo</a></li>
+                  <li><a href="#">Gamers</a></li>
+                  <li><a href="#">360º</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Buscar productos..." />
+          <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+
+        <div class="carro">
+          <a href="#" class="cart-menu">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">3</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+    <main class="about-content">
+        <section class="about-hero">
+            <h1>Sobre Nosotros</h1>
+            <p>La revolución tecnológica comienza aquí</p>
+        </section>
+
+        <section class="about-info">
+            <h2>Nuestra Historia</h2>
+            <p>
+                Fundada en marzo de 2025, <strong>Laptopedia</strong> nació con la visión de transformar el acceso a
+                tecnología de alto rendimiento en todo el Perú. Nos especializamos en laptops de última generación,
+                buscando siempre calidad, innovación y excelente atención.
+            </p>
+        </section>
+
+        <section class="mision">
+            <h2>Misión y Visión</h2>
+            <div class="mission-vision">
+                <div>
+                    <h3>Misión</h3>
+                    <p>Brindar una experiencia de compra online moderna, confiable y segura, ofreciendo laptops de alto
+                        rendimiento al mejor precio del mercado.</p>
+                </div>
+                <div>
+                    <h3>Visión</h3>
+                    <p>Convertirnos en la tienda online líder en tecnología portátil en Latinoamérica, con presencia
+                        global y excelencia en servicio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-team">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="miembros">
+                    <h3>Juan Mamani Vilca</h3>
+                    <p>Fundador & CEO</p>
+                </div>
+                <div class="miembros">
+                    <h3>Raúl Arteaga Pereyra</h3>
+                    <p>Jefe de Operaciones</p>
+                </div>
+                <div class="miembros">
+                    <h3>Mayanga Cabrera</h3>
+                    <p>Jefe de Marketing</p>
+                </div>
+                <div class="miembros">
+                    <h3>Gabriel Antonio</h3>
+                    <p>Jefe de Logística</p>
+                </div>
+                <div class="miembros">
+                    <h3>Juan Richard Mamani Vilca</h3>
+                    <p>Jefe de Tecnología</p>
+                </div>
+                <div class="miembros">
+                    <h3>Marcelo Guadalupe Gonzales</h3>
+                    <p>Jefe de Atención al Cliente</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-location">
+            <h2>Ubicación</h2>
+            <p>
+                <strong>Lima:</strong> Av. Petit Thouars 1418 <br>
+                <strong>Trujillo:</strong> Jirón Junin 699 <br>
+                <em>Con un ambicioso plan de expansión nacional</em>
+            </p>
+        </section>
+    </main>
+
+    <a href="#" id="wsp">
+        <img src="/img/wsp.png" alt="wsp">
+    </a>
+
+    <footer>
+      <iframe class="footer" src="/html/footer.html" frameborder="0"></iframe>
+    </footer>
+    <script>
+    const footerIframe = document.getElementById("footerIframe");
+    function adjustFooterIframeHeight() {
+      if (
+        footerIframe && footerIframe.contentWindow && footerIframe.contentWindow.document.body
+      ) {
+        const newHeight = footerIframe.contentWindow.document.body.scrollHeight;
+        footerIframe.style.height = newHeight + "px";
+      }
+    }
+    footerIframe.onload = adjustFooterIframeHeight;
+    window.addEventListener("resize", adjustFooterIframeHeight);
+  </script>
+</body>
+</html>

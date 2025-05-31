@@ -1,0 +1,18 @@
+@import "common.css";
+@import "header.css";
+@import "main.css";
+@import "productos.css";
+@import "wsp.css";
+@import "submenu.css";
+
+body{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.footer{
+  width: 100% ;
+  min-height: 260.2px;
+  display: block;
+  border: none;
+}
