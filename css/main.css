@@ -110,6 +110,16 @@
     padding: 20px;
 }
 
+.laptop-card {
+    position: relative;
+}
+.icon-ofert{
+  position: absolute;
+  top: -70px;
+  right: 10px;
+  z-index: 10;
+}
+
 /* productos */
 
 .products {
