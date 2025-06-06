@@ -76,6 +76,18 @@
               <div class="slide">
                 <a href="/html/productos.html"><img src="/img/ofertadelaptops.webp" alt="Imagen 1 del slider"></a>
               </div>
+              <div class="slide">
+                <a href="/html/productos.html"><img src="/img/ofertadelaptops2.webp" alt="Imagen 2 del slider"></a>
+              </div>
+              <div class="slide">
+                <a href="/html/productos.html"><img src="/img/ofertadelaptops3.webp" alt="Imagen 3 del slider"></a>
+              </div>
+              <div class="slide">
+                <a href="/html/productos.html"><img src="/img/ofertadelaptops4.webp" alt="Imagen 4 del slider"></a>
+              </div>
+              <div class="slide">
+                <a href="/html/productos.html"><img src="/img/ofertadelaptops5.webp" alt="Imagen 4 del slider"></a>
+              </div>
             </div>
             <button class="prev-btn">❮</button>
             <button class="next-btn">❯</button>
@@ -314,26 +326,13 @@
     </div>
   </main>
 
-  <a href="https://wa.me/qr/QSYNMUL7PZWRL1" id="wsp">
+  <a href="https://wa.me/903495858" target="_blank" id="wsp">
     <img src="img/wsp.png" alt="wsp" />
   </a>
-
+  <script src="/js/script.js"></script>
   <footer>
     <iframe class="footer" id="footerIframe" src="/html/footer.html" frameborder="0"></iframe>
   </footer>
-  <script>
-    const footerIframe = document.getElementById("footerIframe");
-    function adjustFooterIframeHeight() {
-      if (
-        footerIframe && footerIframe.contentWindow && footerIframe.contentWindow.document.body
-      ) {
-        const newHeight = footerIframe.contentWindow.document.body.scrollHeight;
-        footerIframe.style.height = newHeight + "px";
-      }
-    }
-    footerIframe.onload = adjustFooterIframeHeight;
-    window.addEventListener("resize", adjustFooterIframeHeight);
-  </script>
 </body>
 
 </html>
