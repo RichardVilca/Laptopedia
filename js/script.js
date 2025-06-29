@@ -25,13 +25,32 @@ function actualizarCarrusel() {
 }
 function cambiarImagen(direccion) {
   indice = (indice + direccion + totalImagenes) % totalImagenes;
-  indiceActual = indice; // Actualizar el índice actual
+  indiceActual = indice;
   actualizarCarrusel();
 }
 function iniciarCarrusel() {
   setInterval(() => {
     cambiarImagen(1);
-  }, 5000); // Cambia la imagen cada 3 segundos
+  }, 5000);
 }
-// Iniciar el carrusel automáticamente
 iniciarCarrusel();
+
+//colors: ['#a8dadc', '#457b9d', '#1d3557'],
+document.addEventListener('mousemove', function (e) {
+  // Crea un nuevo elemento div para el rastro
+  const trail = document.createElement('div');
+  trail.classList.add('ghost-trail');
+
+  // Posiciona el elemento en la ubicación actual del cursor
+  trail.style.left = e.clientX + 'px';
+  trail.style.top = e.clientY + 'px';
+
+  // Agrega el elemento al cuerpo del documento
+  document.body.appendChild(trail);
+
+  // Elimina el elemento después de que la animación termine
+  // La duración de la animación es de 1 segundo (1000 ms)
+  setTimeout(() => {
+    trail.remove();
+  }, 1000);
+});

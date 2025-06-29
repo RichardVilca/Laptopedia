@@ -10,3 +10,28 @@
 img {
     max-width: 100%;
 }
+
+.ghost-trail {
+    position: absolute;
+    background-color: #457b9d;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    animation: fadeOutMove 1s forwards;
+    z-index: 99;
+}
+
+@keyframes fadeOutMove {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5) translateY(-20px);
+    }
+}
