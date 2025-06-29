@@ -35,21 +35,15 @@ function iniciarCarrusel() {
 }
 iniciarCarrusel();
 
-//colors: ['#a8dadc', '#457b9d', '#1d3557'],
 document.addEventListener('mousemove', function (e) {
-  // Crea un nuevo elemento div para el rastro
   const trail = document.createElement('div');
   trail.classList.add('ghost-trail');
 
-  // Posiciona el elemento en la ubicación actual del cursor
-  trail.style.left = e.clientX + 'px';
-  trail.style.top = e.clientY + 'px';
+  trail.style.left = e.pageX + 'px';
+  trail.style.top = e.pageY + 'px';
 
-  // Agrega el elemento al cuerpo del documento
   document.body.appendChild(trail);
 
-  // Elimina el elemento después de que la animación termine
-  // La duración de la animación es de 1 segundo (1000 ms)
   setTimeout(() => {
     trail.remove();
   }, 1000);
