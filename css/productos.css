@@ -3,19 +3,16 @@
 @import "submenu.css";
 @import "main.css";
 @import "wsp.css";
+@import "footer.css";
 
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
 }
-
-.footer {
-  width: 100%;
-  min-height: 191px;
-  display: block;
-  border: none;
-}
-
 
 .container-productos {
   max-width: 1200px;

@@ -3,17 +3,14 @@
 @import "submenu.css";
 @import "content.css";
 @import "wsp.css";
+@import "footer.css";
 
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-}
-
-.footer {
-  width: 100%;
-  min-height: 191px;
-  display: block;
-  border: none;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
 main{
@@ -31,11 +28,12 @@ main{
 }
 
 .container-contacto h1 {
-  color: #333;
+  color: #39618b;
   text-align: center;
   margin-bottom: 30px;
   font-size: 2.2em;
   padding-bottom: 15px;
+  border-bottom: 2px solid #39618b;
 }
 
 /* Estilos del Formulario */
@@ -46,7 +44,7 @@ main{
 .container-contacto label {
   display: block;
   margin-bottom: 8px;
-  color: #555;
+  color: #39618b;
   font-weight: bold;
   font-size: 1.1em;
 }

@@ -141,20 +141,38 @@
     </a>
 
     <footer>
-      <iframe class="footer" src="/html/footer.html" frameborder="0"></iframe>
+      <div class="caja">
+        <div class="footer-content">
+          <div class="link">
+            <h3>Contáctanos</h3>
+            <ul>
+              <li><a href="#">Atendemos las 24 Horas</a></li>
+              <li><a href="#">946 348 695</a></li>
+              <li><a href="#">laptopedia@gmail.com.pe</a></li>
+              <li><a href="#">(044) 243069</a></li>
+            </ul>
+          </div>
+          <div class="link">
+            <h3>Ubícanos</h3>
+            <ul>
+              <li><a href="#">Lima:</a></li>
+              <li><a href="#">Av. Petit Thouars 1418 </a></li>
+              <li><a href="#">Trujillo:</a></li>
+              <li><a href="#">Jirón Junin 699</a></li>
+            </ul>
+          </div>
+          <div class="link">
+            <h3>Compra con Confianza</h3>
+            <ul>
+              <li><a href="#">Acerca de Nosotros</a></li>
+              <li><a href="#">Preguntas Frecuentes</a></li>
+              <li><a href="#">Políticas de Devoluciones</a></li>
+              <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+        </div>
+        <p>&copy; 2025 Tienda de Laptops - Todos los derechos reservados</p>
+      </div>
     </footer>
-    <script>
-    const footerIframe = document.getElementById("footerIframe");
-    function adjustFooterIframeHeight() {
-      if (
-        footerIframe && footerIframe.contentWindow && footerIframe.contentWindow.document.body
-      ) {
-        const newHeight = footerIframe.contentWindow.document.body.scrollHeight;
-        footerIframe.style.height = newHeight + "px";
-      }
-    }
-    footerIframe.onload = adjustFooterIframeHeight;
-    window.addEventListener("resize", adjustFooterIframeHeight);
-  </script>
 </body>
 </html>

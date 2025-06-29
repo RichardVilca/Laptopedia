@@ -4,6 +4,7 @@
 @import "productos.css";
 @import "wsp.css";
 @import "submenu.css";
+@import "footer.css";
 
 body{
   display: grid;

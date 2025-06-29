@@ -2,18 +2,36 @@
 footer {
     background: #2a394f;
     width: 100%;
+    text-wrap: balance;
+    padding: 20px 0;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    
 }
 
 .caja{
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;  
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  line-height: 1.5;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     gap: 20px;
 }
 
@@ -22,6 +40,8 @@ footer {
     color: white;
     text-transform: uppercase;
     padding: 10px;
+    border-bottom: 2px solid #39618b;
+    margin-bottom: 10px;
 }
 
 .link ul{
@@ -34,12 +54,16 @@ footer {
 .link a {
     font-size: 16px;
     color: #dcdcdc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 5px 0;
 }
 
 footer p{
     text-align: center;
     color: white;
-    padding-top: 20px;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
 @media(max-width:768px){
