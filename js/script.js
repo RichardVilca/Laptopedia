@@ -1,43 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const sliderWrapper = document.querySelector(".slider-wrapper");
-  const slides = document.querySelectorAll(".slide");
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
-
-  let currentIndex = 0;
-  const totalSlides = slides.length;
-
-  function updateSliderPosition() {
-    const offset = -currentIndex * 100;
-    sliderWrapper.style.transform = `translateX(${offset}%)`;
-  }
-
-  function goToNextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateSliderPosition();
-  }
-
-  function goToPrevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateSliderPosition();
-  }
-
-  nextBtn.addEventListener("click", goToNextSlide);
-  prevBtn.addEventListener("click", goToPrevSlide);
-
-  setInterval(goToNextSlide, 5000);
-});
-
-const footerIframe = document.getElementById("footerIframe");
-function adjustFooterIframeHeight() {
-  if (
-    footerIframe &&
-    footerIframe.contentWindow &&
-    footerIframe.contentWindow.document.body
-  ) {
-    const newHeight = footerIframe.contentWindow.document.body.scrollHeight;
-    footerIframe.style.height = newHeight + "px";
-  }
+//codigo para el carrusel
+let indiceActual = 0;
+const contenedor = document.getElementById('contenedor');
+const puntos = document.getElementById('puntos');
+const totalImagenes = contenedor.children.length;
+let indice = 0;
+// Crear puntos
+for (let i = 0; i < totalImagenes; i++) {
+  const punto = document.createElement('span');
+  punto.addEventListener('click', () => {
+    indiceActual = i;
+    actualizarCarrusel();
+  });
+  puntos.appendChild(punto);
 }
-footerIframe.onload = adjustFooterIframeHeight;
-window.addEventListener("resize", adjustFooterIframeHeight);
+function actualizarCarrusel() {
+  contenedor.style.transform = `translateX(-${indiceActual * 100}%)`;
+  const puntosSpan = puntos.querySelectorAll('span');
+  puntosSpan.forEach((punto, index) => {
+    punto.classList.remove('activo');
+    if (index === indiceActual) {
+      punto.classList.add('activo');
+    }
+  });
+}
+function cambiarImagen(direccion) {
+  indice = (indice + direccion + totalImagenes) % totalImagenes;
+  indiceActual = indice; // Actualizar el índice actual
+  actualizarCarrusel();
+}
+function iniciarCarrusel() {
+  setInterval(() => {
+    cambiarImagen(1);
+  }, 5000); // Cambia la imagen cada 3 segundos
+}
+// Iniciar el carrusel automáticamente
+iniciarCarrusel();

@@ -71,26 +71,18 @@
     <div class="main">
       <div class="main-content">
         <div class="contenido">
-          <section class="slider-container">
-            <div class="slider-wrapper">
-              <div class="slide">
-                <a href="/html/productos.html"><img src="/img/ofertadelaptops.webp" alt="Imagen 1 del slider"></a>
-              </div>
-              <div class="slide">
-                <a href="/html/productos.html"><img src="/img/ofertadelaptops2.webp" alt="Imagen 2 del slider"></a>
-              </div>
-              <div class="slide">
-                <a href="/html/productos.html"><img src="/img/ofertadelaptops3.webp" alt="Imagen 3 del slider"></a>
-              </div>
-              <div class="slide">
-                <a href="/html/productos.html"><img src="/img/ofertadelaptops4.webp" alt="Imagen 4 del slider"></a>
-              </div>
-              <div class="slide">
-                <a href="/html/productos.html"><img src="/img/ofertadelaptops5.webp" alt="Imagen 4 del slider"></a>
-              </div>
-            </div>
-            <button class="prev-btn">❮</button>
-            <button class="next-btn">❯</button>
+          <section class="carrusel">
+            <div class="imagenes" id="contenedor">
+            <img src="/img/ofertadelaptops.webp" alt="imagen1">
+            <img src="/img/ofertadelaptops2.webp" alt="imagen2">
+            <img src="/img/ofertadelaptops3.webp" alt="imagen3">
+            <img src="/img/ofertadelaptops5.webp" alt="imagen5">
+        </div>
+
+        <button class="boton anterior" onclick="cambiarImagen(-1)">&#10094;</button>
+        <button class="boton siguiente" onclick="cambiarImagen(1)">&#10095;</button>
+
+        <div class="puntos" id="puntos"></div>
           </section>
           <div class="contenido-txt">
             <h1>¡Aprovecha nuestras ofertas en laptops!</h1>
