@@ -2,276 +2,120 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laptopedia</title>
-    <link rel="icon" type="image/png" href="/img/lg.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/productos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laptopedia</title>
+  <link rel="icon" type="image/png" href="/img/lg.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/productos.css">
 </head>
 
 <body>
-    <header>
-        <div class="principal">
-            <div class="menu-principal">
-                <a href="/index.html" target="_top" class="logo">laptopedia</a>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="/index.html" target="_top">Inicio</a></li>
-                        <li>
-                            <a href="/html/productos.html" target="_top">Productos</a>
-                        </li>
-                        <li><a href="/html/nosotros.html" target="_top">Nosotros</a></li>
-                        <li><a href="/html/contactos.html" target="_top">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <div class="submenu">
-            <div class="container-submenu">
-                <div>
-                    <div class="categoria">
-                        <div>
-                            <input type="checkbox" id="menu-toggle" />
-                            <label for="menu-toggle" class="menu-icon"
-                                aria-label="Abrir menú de navegación"><span>Categoría</span>&#9776;</label>
-                            <nav class="menu">
-                                <ul>
-                                    <li><a href="#">Todo</a></li>
-                                    <li><a href="#">Ofertas</a></li>
-                                    <li><a href="#">Nuevo</a></li>
-                                    <li><a href="#">Lo mas vendido</a></li>
-                                    <li><a href="#">Para trabajo</a></li>
-                                    <li><a href="#">Gamers</a></li>
-                                    <li><a href="#">360º</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Buscar productos..." />
-                    <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                </div>
-
-                <div class="carro">
-                    <a href="#" class="cart-menu">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-count">3</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="container-productos">
-            <h2>Todos los productos</h2>
-            <div class="laptop-grid">
-                <div class="laptop-card">
-                    <img src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/x/p/xps-15_3.jpg"
-                        alt="Laptop Ultra Delgado">
-                    <div class="laptop-info">
-                        <h3>Dell XPS 15 - Ultra Delgado</h3>
-                        <p>Diseño premium y rendimiento excepcional para profesionales y creadores.</p>
-                        <ul class="specs">
-                            <li><strong>Procesador:</strong> Intel Core i7 13va Gen</li>
-                            <li><strong>RAM:</strong> 16GB DDR5</li>
-                            <li><strong>Almacenamiento:</strong> 512GB SSD NVMe</li>
-                            <li><strong>Pantalla:</strong> 15.6" FHD+ InfinityEdge</li>
-                            <li><strong>Gráficos:</strong> NVIDIA RTX 4050</li>
-                        </ul>
-                        <div class="price">$1,799.00 USD</div>
-                        <a href="#" class="btn-ver-mas">Ver Detalles</a>
-                    </div>
-                </div>
-
-                <div class="laptop-card">
-                    <img src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/a/s/asus-rog-strix-g15001_1.jpg"
-                        alt="Laptop Gaming de Alto Rendimiento">
-                    <div class="laptop-info">
-                        <h3>ASUS ROG Strix G15 - Gaming</h3>
-                        <p>Dominio en el campo de batalla con potencia bruta y gráficos impresionantes.</p>
-                        <ul class="specs">
-                            <li><strong>Procesador:</strong> AMD Ryzen 9 7000 Series</li>
-                            <li><strong>RAM:</strong> 32GB DDR5</li>
-                            <li><strong>Almacenamiento:</strong> 1TB SSD NVMe</li>
-                            <li><strong>Pantalla:</strong> 15.6" QHD 165Hz</li>
-                            <li><strong>Gráficos:</strong> NVIDIA RTX 4070</li>
-                        </ul>
-                        <div class="price">$2,199.00 USD</div>
-                        <a href="#" class="btn-ver-mas">Ver Detalles</a>
-                    </div>
-                </div>
-
-                <div class="laptop-card">
-                    <img src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/f/l/flex-1_5.jpg"
-                        alt="Laptop para Estudiantes">
-                    <div class="laptop-info">
-                        <h3>Lenovo IdeaPad Flex 5 - Versátil</h3>
-                        <p>Perfecta para estudiantes y productividad, con diseño 2 en 1 táctil.</p>
-                        <ul class="specs">
-                            <li><strong>Procesador:</strong> Intel Core i5 12va Gen</li>
-                            <li><strong>RAM:</strong> 8GB DDR4</li>
-                            <li><strong>Almacenamiento:</strong> 256GB SSD</li>
-                            <li><strong>Pantalla:</strong> 14" FHD Táctil</li>
-                            <li><strong>Gráficos:</strong> Intel Iris Xe Graphics</li>
-                        </ul>
-                        <div class="price">$749.00 USD</div>
-                        <a href="#" class="btn-ver-mas">Ver Detalles</a>
-                    </div>
-                </div>
-
-                <div class="laptop-card">
-                    <img src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/m/a/macbook-pro-16.jpg" alt="MacBook Pro">
-                    <div class="laptop-info">
-                        <h3>Apple MacBook Pro 14" - M2 Pro</h3>
-                        <p>Potencia sin igual para creativos y profesionales, con ecosistema Apple.</p>
-                        <ul class="specs">
-                            <li><strong>Procesador:</strong> Apple M2 Pro (10-core CPU)</li>
-                            <li><strong>RAM:</strong> 16GB Unificada</li>
-                            <li><strong>Almacenamiento:</strong> 512GB SSD</li>
-                            <li><strong>Pantalla:</strong> 14.2" Liquid Retina XDR</li>
-                            <li><strong>Gráficos:</strong> Apple M2 Pro (16-core GPU)</li>
-                        </ul>
-                        <div class="price">$2,499.00 USD</div>
-                        <a href="#" class="btn-ver-mas">Ver Detalles</a>
-                    </div>
-                </div>
-                <div class="laptop-card">
-                <img
-                  src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/l/e/lenovo-1_7.jpg"
-                  alt="Laptop">
-                <div class="laptop-info">
-                  <h3>Lenovo 100e Chromebook 2nd Gen</h3>
-                  <p>AMD A4-9120C 1.6 GHz, RAM 4GB, SSD 32GB, LED 11.6" HD, ChromeOS</p>
-                  <div class="price">S/. 599.00</div>
-                  <a href="/html/productos.html" class="btn-ver-mas">Ver Laptop</a>
-                </div>
-              </div>
-              <div class="laptop-card">
-                <img
-                  src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/c/o/convertible-hyundai-hyflip-2-en-1.jpg"
-                  alt="Laptop">
-                <div class="laptop-info">
-                  <h3>Hyundai HyFlip 2-en-1</h3>
-                  <p>Intel Celeron N3350 Hasta 2.4 GHz, RAM 4GB, SSD 64GB, LED 11.6" HD, Windows 10 Pro. Peso 1.1 Kg</p>
-                  <div class="price">S/. 799.00</div>
-                  <a href="/html/productos.html" class="btn-ver-mas">Ver Laptop</a>
-                </div>
-              </div>
-              <div class="laptop-card">
-                <img
-                  src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/d/e/delll_2.jpg"
-                  alt="Laptop">
-                <div class="laptop-info">
-                  <h3>Dell Educativa Latitude 3190</h3>
-                  <p>Intel Celeron N4120/ RAM 4GB/ SSD 128GB/ 11.6" HD/ W10H.</p>
-                  <div class="price">S/. 999.00</div>
-                  <a href="/html/productos.html" class="btn-ver-mas">Ver Laptop</a>
-                </div>
-              </div>
-              <div class="laptop-card">
-                <img
-                  src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/1/1/11111.jpg"
-                  alt="Laptop">
-                <div class="laptop-info">
-                  <h3>ONN Surf</h3>
-                  <p>Intel Core i3-8145U Hasta 3.9 GHz, RAM 4GB, SSD 128GB, LED 13.3" Full HD, Windows 10 Home</p>
-                  <div class="price">S/. 1099.00</div>
-                  <a href="/html/productos.html" class="btn-ver-mas">Ver Laptop</a>
-                </div>
-              </div>
-              <div class="laptop-card">
-                <img
-                  src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/p/o/portege-a30_1.jpg"
-                  alt="Laptop">
-                <div class="laptop-info">
-                  <h3>Toshiba Dynabook Portege A30-G</h3>
-                  <p>Intel Celeron 5205U/ RAM 8GB/ SSD 128GB/ 13.3" FHD/ W11P</p>
-                  <div class="price">S/. 1199.00</div>
-                  <a href="/html/productos.html" class="btn-ver-mas">Ver Laptop</a>
-                </div>
-              </div>
-              <div class="laptop-card">
-                <img
-                  src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/h/y/hyundai-thinnote-13-pro.jpg"
-                  alt="Laptop">
-                <div class="laptop-info">
-                  <h3>Hyundai ThinNote 13 Pro Ultrabook</h3>
-                  <p>Intel Core i5-8250U Hasta 3.4 GHz, RAM 8GB, SSD 256GB, LED 13.3" Full HD, Windows 10 Home, Peso 1.2
-                    Kg</p>
-                  <div class="price">S/. 1299.00</div>
-                  <a href="/html/productos.html" class="btn-ver-mas">Ver Laptop</a>
-                </div>
-              </div>
-              <div class="laptop-card">
-                <img
-                  src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/l/a/laptop-microsoft.jpg"
-                  alt="Laptop">
-                <div class="laptop-info">
-                  <h3>Microsoft Surface Touch</h3>
-                  <p>Intel Core i5-7200U 2.5 GHz, RAM 4GB, SSD 128GB, Pantalla Táctil LED 13.5" QHD (2256x1504), Windows
-                    10 S</p>
-                  <div class="price">S/. 1399.00</div>
-                  <a href="/html/productos.html" class="btn-ver-mas">Ver Laptop</a>
-                </div>
-              </div>
-              <div class="laptop-card">
-                <img
-                  src="https://www.magitech.pe/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/8/_/8_14_62.jpg"
-                  alt="Laptop">
-                <div class="laptop-info">
-                  <h3>HP x360 CTO Chromebook Plus</h3>
-                  <p>Core i3-1215U Hasta 4.4 GHz, RAM 8GB, SSD 128GB, LED 14" WUXGA Touchscreen, ChromeOS</p>
-                  <div class="price">S/. 1199.00</div>
-                  <a href="/html/productos.html" class="btn-ver-mas">Ver Laptop</a>
-                </div>
-              </div>
-        </div>
-    </main>
-    <a href="#" id="wsp">
-        <img src="/img/wsp.png" alt="wsp">
-    </a>
-
-    <footer>
-      <div class="caja">
-        <div class="footer-content">
-          <div class="link">
-            <h3>Contáctanos</h3>
-            <ul>
-              <li><a href="#">Atendemos las 24 Horas</a></li>
-              <li><a href="#">946 348 695</a></li>
-              <li><a href="#">laptopedia@gmail.com.pe</a></li>
-              <li><a href="#">(044) 243069</a></li>
-            </ul>
-          </div>
-          <div class="link">
-            <h3>Ubícanos</h3>
-            <ul>
-              <li><a href="#">Lima:</a></li>
-              <li><a href="#">Av. Petit Thouars 1418 </a></li>
-              <li><a href="#">Trujillo:</a></li>
-              <li><a href="#">Jirón Junin 699</a></li>
-            </ul>
-          </div>
-          <div class="link">
-            <h3>Compra con Confianza</h3>
-            <ul>
-              <li><a href="#">Acerca de Nosotros</a></li>
-              <li><a href="#">Preguntas Frecuentes</a></li>
-              <li><a href="#">Políticas de Devoluciones</a></li>
-              <li><a href="#">Términos y Condiciones</a></li>
-            </ul>
-          </div>
-        </div>
-        <p>&copy; 2025 Tienda de Laptops - Todos los derechos reservados</p>
+  <header>
+    <div class="principal">
+      <div class="menu-principal">
+        <a href="/index.html" target="_top" class="logo">laptopedia</a>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/index.html" target="_top" id="inicio">Inicio</a></li>
+            <li>
+              <a href="/html/productos.html" target="_top">Productos</a>
+            </li>
+            <li><a href="/html/nosotros.html" target="_top">Nosotros</a></li>
+            <li><a href="/html/contactos.html" target="_top">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
-    </footer>
-    <script src="/js/mouse.js"></script>
+    </div>
+
+    <div class="submenu">
+      <div class="container-submenu">
+        <div>
+          <div class="categoria">
+            <div>
+              <input type="checkbox" id="menu-toggle" />
+              <label for="menu-toggle" class="menu-icon"
+                aria-label="Abrir menú de navegación"><span>Categoría</span>&#9776;</label>
+              <nav class="menu">
+                <ul id="categorias">
+                  <li><a href="#" categoria="todo">Todo</a></li>
+                  <li><a href="#" categoria="ofertas">Ofertas</a></li>
+                  <li><a href="#" categoria="nuevo">Nuevo</a></li>
+                  <li><a href="#" categoria="lo-mas-vendido">Lo mas vendido</a></li>
+                  <li><a href="#" categoria="para-trabajo">Para trabajo</a></li>
+                  <li><a href="#" categoria="gamers">Gamers</a></li>
+                  <li><a href="#" categoria="360º">360º</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Buscar productos..." />
+          <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+
+        <div class="carro">
+          <a href="#" class="cart-menu">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">3</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-productos">
+      <h2>Productos</h2>
+      <div class="laptop-grid" id="product">
+        <!-- Aquí se cargarán los productos dinámicamente -->
+      </div>
+  </main>
+  <a href="https://wa.me/903495858" target="_blank" id="wsp">
+    <img src="../img/wsp.png" alt="wsp" />
+  </a>
+
+  <footer>
+    <div class="caja">
+      <div class="footer-content">
+        <div class="link">
+          <h3>Contáctanos</h3>
+          <ul>
+            <li><a href="#">Atendemos las 24 Horas</a></li>
+            <li><a href="#">946 348 695</a></li>
+            <li><a href="#">laptopedia@gmail.com.pe</a></li>
+            <li><a href="#">(044) 243069</a></li>
+          </ul>
+        </div>
+        <div class="link">
+          <h3>Ubícanos</h3>
+          <ul>
+            <li><a href="#">Lima:</a></li>
+            <li><a href="#">Av. Petit Thouars 1418 </a></li>
+            <li><a href="#">Trujillo:</a></li>
+            <li><a href="#">Jirón Junin 699</a></li>
+          </ul>
+        </div>
+        <div class="link">
+          <h3>Compra con Confianza</h3>
+          <ul>
+            <li><a href="#">Acerca de Nosotros</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Políticas de Devoluciones</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>&copy; 2025 Tienda de Laptops - Todos los derechos reservados</p>
+    </div>
+  </footer>
+  <script src="../js/mouse.js"></script>
+  <script src="../js/categoria.js"></script>
+  <script src="../js/productos.js"></script>
+  <script src="../js/buscar.js"></script>
 </body>
 
 </html>

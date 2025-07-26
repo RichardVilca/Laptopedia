@@ -10,4 +10,4 @@ document.addEventListener('mousemove', function (e) {
     setTimeout(() => {
         trail.remove();
     }, 1000);
-});
+}); 

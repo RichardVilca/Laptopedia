@@ -35,16 +35,15 @@ function iniciarCarrusel() {
 }
 iniciarCarrusel();
 
-document.addEventListener('mousemove', function (e) {
-  const trail = document.createElement('div');
-  trail.classList.add('ghost-trail');
 
-  trail.style.left = e.pageX + 'px';
-  trail.style.top = e.pageY + 'px';
+const cerrarModal = () => {
+  document.getElementById("modal").style.display = "none";
 
-  document.body.appendChild(trail);
+  const musica = document.getElementById("musica");
+  if (musica.paused) {
+    musica.play().catch(() => {
+      console.log("Autoplay bloqueado. El usuario debe interactuar.");
+    });
+  }
+};
 
-  setTimeout(() => {
-    trail.remove();
-  }, 1000);
-});

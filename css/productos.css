@@ -18,6 +18,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  min-height: calc(100vh - 110px);
 }
 
 h2 {
@@ -33,6 +34,7 @@ h2 {
   padding: 20px 0;
 }
 
+/*coloca el boton abajo de la card sin usar position absolute*/
 .laptop-card {
   background-color: #fff;
   border: 1px solid #eee;
@@ -43,7 +45,11 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.laptop-card a {
+  display: block;
+  align-items: flex-end;
 }
 
 .laptop-card img {
@@ -60,6 +66,7 @@ h2 {
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
+  height: calc(100% - 200px);
 }
 
 .laptop-info h3 {
@@ -88,6 +95,11 @@ h2 {
   font-weight: bold;
   margin-top: auto;
   margin-bottom: 10px;
+}
+
+.laptop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-ver-mas {
@@ -120,5 +132,11 @@ h2 {
 
   .laptop-grid {
     grid-template-columns: 1fr;
+  }
+}
+/*ajustar el maximo ancho de los productos cuando la pantalla sea mayor a 768px*/
+@media (min-width: 1100px) {
+  .laptop-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

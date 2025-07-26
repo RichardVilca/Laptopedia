@@ -6,112 +6,338 @@
 @import "footer.css";
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   min-height: 100vh;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
+  color: #2d3748;
+  overflow-x: hidden;
 }
 
-main{
-  margin: 20px auto;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 .container-contacto {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
   max-width: 700px;
-  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInScale 0.8s ease-out;
 }
 
-.container-contacto h1 {
-  color: #39618b;
+.container-contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+}
+
+main h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.2em;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #39618b;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
 }
 
-/* Estilos del Formulario */
+main h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
 .form-group {
-  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.container-contacto label {
-  display: block;
-  margin-bottom: 8px;
-  color: #39618b;
-  font-weight: bold;
-  font-size: 1.1em;
+main label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
 }
 
-.container-contacto
-input[type="text"],
+main input[type="text"],
 input[type="email"],
 input[type="tel"],
 select,
 textarea {
-  width: calc(100% - 20px);
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1em;
-  color: #333;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 16px;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  outline: none;
 }
-.container-contacto
-input[type="text"]:focus,
+
+main input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #4b7aac;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-  outline: none;
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+main input::placeholder,
+textarea::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+main select {
+  cursor: pointer;
+  appearance: none;
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 16px;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.checkbox-group label::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid #667eea;
+  border-radius: 4px;
+  margin-right: 10px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked+label {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.checkbox-group input[type="checkbox"]:checked+label::before {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-color: #667eea;
+}
+
+.checkbox-group input[type="checkbox"]:checked+label::after {
+  content: '✓';
+  position: absolute;
+  left: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
+  font-family: inherit;
 }
 
-.checkbox-group label {
-  display: inline-block;
-  margin-right: 15px;
-  font-weight: normal;
-}
-.container-contacto
-input[type="checkbox"] {
-  margin-right: 8px;
-  transform: scale(1.1);
-  /* Hace los checkboxes un poco más grandes */
-}
-.container-contacto
 button {
-  background-color: #345c86;
+  padding: 18px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: white;
-  padding: 15px 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 1.2em;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
-  display: block;
-  margin-top: 30px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
-.container-contacto
+
 button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
 }
-.container-contacto 
+
+button:hover::before {
+  left: 100%;
+}
+
 button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Animación para los campos del formulario */
+.form-group {
+  animation: fadeInUp 0.9s ease-out forwards;
+  opacity: 0;
+}
+
+.form-group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.form-group:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.form-group:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.form-group:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.form-group:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.form-group:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+button {
+  animation: fadeInUp 0.6s ease-out 0.7s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-contacto {
+    padding: 30px 25px;
+    margin: 20px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  form {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 10px;
+  }
+
+  .container-contacto {
+    padding: 25px 20px;
+  }
+
+  button {
+    padding: 16px 30px;
+    font-size: 1rem;
+  }
 }
